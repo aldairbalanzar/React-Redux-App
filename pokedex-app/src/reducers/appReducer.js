@@ -2,6 +2,7 @@ import { LOAD_POKEMON, GET_POKEMON, SET_ERROR } from '../actions/appActions';
 
 const initialState = {
     pokemonList: [],
+    pokemonDataList: [],
     isFetching: false,
     error: ''
 }

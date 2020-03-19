@@ -8,22 +8,23 @@ const App = props => {
     e.preventDefault();
     props.loadPokemon();
   }
-
-  console.log(props.state);
+  console.log('line 12:', props.pokemonList);
   return (
     <div className="App">
       <h1>Pokedex:</h1>
       <form action="">
         <button onClick={handleLoadPokemon}> Load Pokemon </button>
       </form>
-      {props.state.poke}
+      {props.pokemonList.map(item => (
+        <p>{item.name}</p>
+      ))}
     </div>
   );
 }
 
 const mapStateToProps = state => {
   return {
-    state: state
+    pokemonList: state.pokemonList
   }
 }
 
