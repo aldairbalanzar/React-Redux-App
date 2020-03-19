@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { loadPokemon } from './actions/appActions';
 import './App.css';
+import './App.scss';
 
 const App = props => {
   const handleLoadPokemon = e => {
@@ -12,12 +13,14 @@ const App = props => {
   return (
     <div className="App">
       <h1>Pokedex:</h1>
-      <form action="">
-        <button onClick={handleLoadPokemon}> Load Pokemon </button>
+      <form className="button-form" action="">
+        <button className="load-button" onClick={handleLoadPokemon}> Load Pokemon </button>
       </form>
-      {props.pokemonList.map(item => (
-        <p>{item.name}</p>
-      ))}
+      <section className="pokemon-list">
+        {props.pokemonList.map(item => (
+          <p className="pokemon-name">{item.name}</p>
+        ))}
+      </section>
     </div>
   );
 }

@@ -1,0 +1,59 @@
+body {
+    background-color: lightgrey;
+}
+
+.App {
+    font-size: 62.5%;
+    margin: 1% 0 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    h1 {
+        width: 100%;
+        font-size: 3rem;
+        margin: 0 0 2%;
+    }
+    
+    .button-form {
+        width: 100%;
+
+
+        .load-button {
+            width: 20%;
+            padding: 1% 0;
+            font-size: 1.6rem;
+            font-weight: bold;
+            background-image: linear-gradient(white, grey);
+            transition: .2s;
+            &:hover {
+                box-shadow: 3px 3px rgba(0, 0, 0, 0.72);
+                transition: .2s
+            }
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    .pokemon-list {
+        width: 84%;
+        margin: 2% 0 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+        .pokemon-name {
+            width: 22%;
+            font-size: 1.6rem;
+            font-weight: bold;
+            border: solid 2px lightyellow;
+            transition: .2s;
+            &:hover {
+                transform: scale(1.1);
+                transition: .2s;
+            }
+        }
+    }
+  }
