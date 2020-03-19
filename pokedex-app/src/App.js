@@ -9,7 +9,9 @@ const App = props => {
     e.preventDefault();
     props.loadPokemon();
   }
-  console.log('line 12:', props.pokemonList);
+
+  console.log('line 18:', props.pokemonList);
+
   return (
     <div className="App">
       <h1>Pokedex:</h1>
@@ -18,7 +20,17 @@ const App = props => {
       </form>
       <section className="pokemon-list">
         {props.pokemonList.map(item => (
-          <p className="pokemon-name">{item.name}</p>
+          <div className="pokemon-card">
+            <p className="pokemon-name">{item.name}</p>
+            <img className="pokemon-sprite" src={item.sprites.front_default} alt={item.name}/>
+            <p className="p-type">Type: </p>
+            {item.types.map(item => (
+              <p className="pokemon-type">{item.type.name}</p>
+            ))}
+          </div>
+          // <img
+          //  src=''
+          //  alt=""/>
         ))}
       </section>
     </div>

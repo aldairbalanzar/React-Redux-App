@@ -1,8 +1,7 @@
-import { LOAD_POKEMON, GET_POKEMON, SET_ERROR } from '../actions/appActions';
+import { LOAD_POKEMON, GET_POKEMON, SET_ERROR, GET_POKEMON_DATA } from '../actions/appActions';
 
 const initialState = {
     pokemonList: [],
-    pokemonDataList: [],
     isFetching: false,
     error: ''
 }
@@ -18,7 +17,7 @@ export const appReducer = (state = initialState, action) => {
         case LOAD_POKEMON:
             return {
                 ...state,
-                pokemonList: [...state.pokemonList, ...action.payload],
+                pokemonList: [...state.pokemonList, action.payload],
                 isFetching: false
             };
         case SET_ERROR:

@@ -44,15 +44,41 @@ body {
         flex-wrap: wrap;
         justify-content: space-evenly;
 
-        .pokemon-name {
-            width: 22%;
-            font-size: 1.6rem;
-            font-weight: bold;
-            border: solid 2px lightyellow;
-            transition: .2s;
+        .pokemon-card {
+            width: 15%;
+            height: 36vh;
+            border-radius: 9px;
+            margin: 1%;
+            box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.8);
+            background-color: rgb(235, 145, 129);
+            background-image: url(https://i.pinimg.com/originals/86/1e/4c/861e4c64ef2bb617050dcce1cef86cc0.png) ;
+            background-size: contain;
+            background-repeat: no-repeat;
+            transition: .3s;
             &:hover {
                 transform: scale(1.1);
-                transition: .2s;
+                box-shadow: 10px 8px 6px rgba(0, 0, 0, 0.74);
+                transition: .3s;
+            }
+
+            .pokemon-name {
+                width: 100%;
+                font-size: .9rem;
+                font-weight: bold;
+                text-align: left;
+                margin: 2% 0 0 25%;
+            }
+
+            .p-type {
+                font-size: .8rem;
+                text-align: left;
+                margin: 2% 0 3% 9%;
+            }
+
+            .pokemon-type {
+                font-size: .8rem;
+                text-align: left;
+                margin: 0 0 0 16%;
             }
         }
     }
