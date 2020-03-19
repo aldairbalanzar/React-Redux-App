@@ -14,7 +14,7 @@ const App = props => {
 
   return (
     <div className="App">
-      <h1>Pokedex:</h1>
+      <h1>Pok&eacute;mon Cards:</h1>
       <form className="button-form" action="">
         <button className="load-button" onClick={handleLoadPokemon}> Load Pokemon </button>
       </form>
